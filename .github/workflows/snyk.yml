@@ -15,7 +15,5 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Run Snyk to check for vulnerabilities 
-        uses: snyk/actions/sbt1.10.0-scala3.4.2@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      - name: sbt test
+        run: sbt -Dsbt.log.noformat=true coursierDependencyTree
