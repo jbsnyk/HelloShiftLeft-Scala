@@ -13,7 +13,7 @@ jobs:
         uses: actions/setup-java@v4.3.0
         with:
           java-version: '17'
-          distribution: 'oracle'
+          distribution: 'adopt'
 
       - name: Run Snyk to check for vulnerabilities 
         uses: snyk/actions/sbt1.10.0-scala3.4.2@master
